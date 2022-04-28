@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+}
+.world {
+  display: grid;
+  width: 70%;
+  height: 100%;
+}
+nav {
+  width: 29%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.block {
+  width: 40px;
+  height: 40px;
+  border: 0.4px solid black;
+  object-fit: cover;
+  background: url("") no-repeat center center/cover;
+  background-color: black;
+}
+/* skins for the blocsk */
+.skyblock {
+  background-image: url();
+}
+.dirt {
+  background-image: url(/img/Dirt.webp);
+}
+.grassblock {
+  background-image: url(/img/Grass_Block.webp);
+}
+.Stone {
+  background-image: url(/img/Stone.webp);
+}
+.cobblestone {
+  background-image: url(/img/Cobblestone.webp);
+}
+.OakLog {
+  background-image: url(/img/Oak_Log.webp);
+}
+.OakLog-leaves {
+  background-image: url(/img/OakLog-leaves.jpg);
+}
+.axe {
+  background-image: url(/img/axe.png);
+}
+.pickaxe {
+  background-image: url(/img/pickaxe.jpg);
+}
+.shovel {
+  background-image: url(/img/shovel.png);
+}
