@@ -18,14 +18,14 @@ let inventory = {
 };
 function Worldgen() {
   World.innerText = "";
-  for (let i = 0; i < 150; i++) {
+  for (let i = 0; i < 504; i++) {
     const blocks = document.createElement("div");
     blocks.classList.add("block");
     blocks.id = i;
     World.append(blocks);
-    if (i < 90) blocks.classList.add("skyblock");
-    else if (i >= 90 && i < 105) blocks.classList.add("grassblock");
-    else if (i >= 105 && i < 120) blocks.classList.add("dirt");
+    if (i < 168) blocks.classList.add("skyblock");
+    else if (i >= 168 && i < 192) blocks.classList.add("grassblock");
+    else if (i >= 192 && i < 216) blocks.classList.add("dirt");
     else blocks.classList.add("stone");
     document.querySelectorAll(".block").forEach((block) => {
       if (block.className.includes("skyblock"))
@@ -33,8 +33,8 @@ function Worldgen() {
       else block.addEventListener("click", mineblock);
     });
   }
-  changeBlock([25, 26, 27, 39, 40, 41, 42, 43], "OakLog-leaves");
-  changeBlock([56, 71, 86], "OakLog");
+  changeBlock([92, 93, 91, 68, 69, 67, 90, 94], "OakLog-leaves");
+  changeBlock([164, 140, 116], "OakLog");
   changeBlock([17, 18, 31, 32, 33, 34], "cloud");
 }
 Worldgen();

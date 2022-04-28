@@ -10,16 +10,16 @@
 }
 body {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
 }
 .World {
   display: grid;
-  grid-template-columns: repeat(15, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  width: 80vw;
-  height: 54vw;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  width: 100vw;
+  height: 55vw;
   border-collapse: collapse;
   background: #81a0ff;
   position: relative;
@@ -32,12 +32,19 @@ body {
   bottom: 0;
 }
 nav {
-  width: 20%;
-  height: 100%;
+  width: 100%;
+  height: 5rem;
   display: flex;
   align-items: center;
+  color: black;
   justify-content: center;
-  flex-direction: column;
+  background-color: #333;
+}
+.tools {
+  margin: 0 2rem;
+}
+h2 {
+  margin: 0 0.31rem;
 }
 .tool {
   width: 4rem;
@@ -96,4 +103,13 @@ div {
 }
 .shovel {
   background-image: url(/img/shovel.webp);
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 8px;
+  }
+  .World {
+    height: 50vh;
+    grid-template-rows: unset;
+  }
 }
