@@ -27,15 +27,15 @@ function Worldgen() {
     else if (i >= 168 && i < 192) blocks.classList.add("grassblock");
     else if (i >= 192 && i < 216) blocks.classList.add("dirt");
     else blocks.classList.add("stone");
-    document.querySelectorAll(".block").forEach((block) => {
-      if (block.className.includes("skyblock"))
-        block.addEventListener("click", placeblock);
-      else block.addEventListener("click", mineblock);
-    });
   }
   changeBlock([92, 93, 91, 68, 69, 67, 90, 94], "OakLog-leaves");
   changeBlock([164, 140, 116], "OakLog");
   changeBlock([17, 18, 31, 32, 33, 34], "cloud");
+  document.querySelectorAll(".block").forEach((block) => {
+    if (block.className.includes("skyblock"))
+      block.addEventListener("click", placeblock);
+    else block.addEventListener("click", mineblock);
+  });
 }
 Worldgen();
 function updateCounters() {
