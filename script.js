@@ -1,6 +1,12 @@
 const World = document.querySelector("section");
 let selectedTool = "pickaxe";
 let inventoryblocks = document.querySelectorAll("h3");
+const startButton = document.querySelector(".startButton");
+const welcomeScreen = document.querySelector(".welcomeScreen");
+startButton.addEventListener("click", () => {
+  welcomeScreen.style.display = "none";
+  Worldgen();
+});
 const blocks = {
   grassblock: "shovel",
   dirt: "shovel",
@@ -37,7 +43,6 @@ function Worldgen() {
     else block.addEventListener("click", mineblock);
   });
 }
-Worldgen();
 function updateCounters() {
   inventoryblocks.forEach((h2) => {
     h2.innerText = inventory[h2.parentElement.classList[0]];

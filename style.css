@@ -113,3 +113,21 @@ div {
     grid-template-rows: unset;
   }
 }
+input {
+  padding: 1rem;
+  font-size: 1rem;
+}
+.welcomeScreen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(/img/start.jpg) no-repeat center center/cover;
+}
+Button {
+  padding: 2rem;
+  font-size: 1rem;
+}
